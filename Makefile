@@ -11,12 +11,8 @@ directories:
 	@mkdir -p $(UI_DIR)
 
 update:
-ifeq ($(DOCROOT_EXISTS), 0)
-	$(info Creating document root)
-	mkdir $(DOCROOT)
-endif
-	\cp -f $(SRC_DIR)/plugin/index.html.tt $(DOCROOT)
-	\cp -f $(SRC_DIR)/plugin/retrieve-success.html.tt $(DOCROOT)
+	\cp -f $(SRC_DIR)/plugin/index.html.tt $(UI_DIR)
+	\cp -f $(SRC_DIR)/plugin/retrieve-success.html.tt $(UI_DIR)
 	\cp -f $(SRC_DIR)/src/MigrateMail.pm /usr/local/cpanel/Cpanel/API
 	\cp -f $(SRC_DIR)/plugin/*.tt $(UI_DIR)
 
