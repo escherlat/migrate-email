@@ -1,20 +1,25 @@
 # migrate-email
 
-A cPanel Plugin for migrating email from an IMAP service.
+A cPanel Plug-in for migrating email from an IMAP service.
 
 # Installation
 
-To install the plugin, please do the following:
+To install the plug-in from git, please do the following:
 
 1. Login to your server via SSH
 2. Clone the repo:
 
-    git clone git@github.com:CpanelInc/migrate-email.git
+    git clone git@github.com:escherlat/migrate-email.git
 
-3. As root, do the following:
+3. Change to the migrate-email directory:
 
-    /scripts/install_plugin /path/to/migrate-email/install.json
-    cp /path/to/migrate-email/src/MigrateMail.pm /usr/local/cpanel/Cpanel/API
+    cd migrate-email
+
+4. Run `make install` with root privileges:
+
+    sudo make install
+
+If everything succeeded, a new Migrate Email icon is now present in all your cPanel accounts. Login to one to verify.
 
 # Contributing
 
