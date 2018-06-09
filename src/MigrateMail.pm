@@ -63,9 +63,9 @@ sub domigrateuser {
 
     my @largemailboxopts = ('--split1 100 --split2 100');
 
-    my $result = Cpanel::SafeRun::Simple::saferun( $imapsync, @mailoptions, @defaultoptions );
+    my $call_result = Cpanel::SafeRun::Simple::saferun( $imapsync, @mailoptions, @defaultoptions );
 
-    if ( $result !~ m/detected 0 errors/im ) {
+    if ( $call_result !~ m/detected 0 errors/im ) {
         $result->error('Failed to transfer email');
         return;
     }
