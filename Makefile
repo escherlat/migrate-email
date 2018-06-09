@@ -11,6 +11,7 @@ directories:
 	@mkdir -p $(UI_DIR)
 
 update:
+	\cp -f $(SRC_DIR)/src/etc/services.json $(CPANEL_DIR)/etc
 	\cp -f $(SRC_DIR)/plugin/index.html.tt $(UI_DIR)
 	\cp -f $(SRC_DIR)/plugin/retrieve-success.html.tt $(UI_DIR)
 	\cp -f $(SRC_DIR)/src/Cpanel/API/MigrateMail.pm /usr/local/cpanel/Cpanel/API
