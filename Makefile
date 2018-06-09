@@ -13,7 +13,7 @@ directories:
 update:
 	\cp -f $(SRC_DIR)/plugin/index.html.tt $(UI_DIR)
 	\cp -f $(SRC_DIR)/plugin/retrieve-success.html.tt $(UI_DIR)
-	\cp -f $(SRC_DIR)/src/MigrateMail.pm /usr/local/cpanel/Cpanel/API
+	\cp -f $(SRC_DIR)/src/Cpanel/API/MigrateMail.pm /usr/local/cpanel/Cpanel/API
 	\cp -f $(SRC_DIR)/plugin/*.tt $(UI_DIR)
 
 create-zip:
