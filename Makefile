@@ -18,3 +18,10 @@ update:
 
 create-zip:
 	tar czvf plugin.tar.gz plugin
+
+uninstall:
+	\rm -f /usr/local/cpanel/Cpanel/API/MigrateMail.pm
+	/scripts/uninstall_plugin $(SRC_DIR)/plugin
+	\rm -f $(UI_DIR)/index.html.tt
+	\rm -f $(UI_DIR)/retrieve-success.html.tt
+	rmdir $(DOCROOT)
